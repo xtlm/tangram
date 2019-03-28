@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+	<head>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+		<title>七巧板</title>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	
+	<body>
+
+
+    <canvas id="drawing" width="360" height="640" style="background:black"></canvas>
+    <input type="text" name="category" id='category'>
+    <input type="text" name="name" id='name'>
+    <button type="button" onclick="consoleLog()">显示位置</button>
+
+    <script type="text/javascript" src="bundle.js"></script>
+    <script type="text/javascript" src="./player/Triangle.js"></script>
+    <script type="text/javascript" src="./player/Square.js"></script>
+    <script type="text/javascript" src="./player/Parallelogram.js"></script>
+    <script type="text/javascript" src="./player/Question.js"></script>
+    <script type="text/javascript" src="./player/Category.js"></script>
+    <script type="text/javascript" src="./player/Templet.js"></script>
+    <script type="text/javascript" src="./player/Enter.js"></script>
+
+<!-- <script type="module">
+import Triangle       from './player/Triangle.js'
+import Square         from './player/Square.js'
+import Parallelogram  from './player/Parallelogram.js'
+import Question       from './player/Question.js'
+import Category       from './player/Category.js'
+import Menu           from './player/menu.js'
+import Templet        from './player/Templet.js'
+import Home           from './player/Home.js'
+</script> -->
+
+
+<script type="text/javascript">
+ 
+  let m = new Enter();
+
+
+  function consoleLog() {
+    let category  = document.getElementById('category').value;
+    let name      = document.getElementById('name').value;
+    m.consoleLog(category,name);
+  }
+
+</script>
+
+
+</body>
+</html>
